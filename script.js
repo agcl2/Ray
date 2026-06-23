@@ -56,7 +56,7 @@ document.getElementById("secretText");
 box.innerHTML = "";
 
 const text =
-"The Honoured One hehe .";
+"The Honoured One ";
 
 let i = 0;
 
