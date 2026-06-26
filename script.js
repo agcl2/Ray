@@ -63,7 +63,7 @@ document.getElementById("secretText");
 box.innerHTML = "";
 
 const text =
-"The Honoured One hehe .";
+"The Honoured One.";
 
 let i = 0;
 
@@ -82,75 +82,6 @@ clearInterval(typing);
 },40);
 
 }
-
-// ==========================
-// RED FALLING PARTICLES
-// ==========================
-
-const particleContainer =
-document.getElementById("particles");
-
-function createParticle(){
-
-const p =
-document.createElement("div");
-
-const size =
-Math.random()*6 + 2;
-
-p.style.position = "absolute";
-
-p.style.width = size + "px";
-p.style.height = size + "px";
-
-p.style.borderRadius = "50%";
-
-p.style.left =
-Math.random()*window.innerWidth + "px";
-
-p.style.top = "-20px";
-
-p.style.background = "red";
-
-p.style.boxShadow =
-"0 0 10px red,0 0 20px red";
-
-particleContainer.appendChild(p);
-
-let pos = -20;
-
-const speed =
-Math.random()*3 + 1;
-
-const drift =
-(Math.random()-0.5)*2;
-
-const fall = setInterval(()=>{
-
-pos += speed;
-
-p.style.top = pos + "px";
-
-let left =
-parseFloat(p.style.left);
-
-left += drift;
-
-p.style.left = left + "px";
-
-if(pos > window.innerHeight){
-
-clearInterval(fall);
-
-p.remove();
-
-}
-
-},16);
-
-}
-
-setInterval(createParticle,120);
 
 // ==========================
 // RANDOM GLOW DOTS
@@ -257,40 +188,6 @@ card.style.transform =
 
 });
 
-// ==========================
-// RED CURSOR GLOW
-// ==========================
-
-const cursor =
-document.createElement("div");
-
-cursor.style.width="18px";
-cursor.style.height="18px";
-
-cursor.style.borderRadius="50%";
-
-cursor.style.position="fixed";
-
-cursor.style.pointerEvents="none";
-
-cursor.style.background="rgba(255,0,0,.8)";
-
-cursor.style.boxShadow=
-"0 0 15px red,0 0 30px red";
-
-cursor.style.zIndex="9999";
-
-document.body.appendChild(cursor);
-
-document.addEventListener("mousemove",(e)=>{
-
-cursor.style.left =
-e.clientX - 9 + "px";
-
-cursor.style.top =
-e.clientY - 9 + "px";
-
-});
 
 // ==========================
 // OPTIONAL CONSOLE MESSAGE
